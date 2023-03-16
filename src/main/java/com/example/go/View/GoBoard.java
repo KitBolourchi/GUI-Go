@@ -14,7 +14,18 @@ public class GoBoard {
     ArrayList<Square> sqaures = new ArrayList<Square>();
 
 
-    public void GoBoard() {
+    public GoBoard(GridPane goBoard) {
+        this.goBoard = goBoard;
+
+        makeBoard(this.goBoard);
+    }
+
+    private void makeBoard(GridPane goBoard) {
+        // nested loop to create the rows / columns of squares and then add to the gridpane
+
+    }
+
+    private void setTheme(GridPane goBoard, int i, int j) {
 
     }
 }

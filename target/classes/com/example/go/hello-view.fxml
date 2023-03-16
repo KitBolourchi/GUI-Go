@@ -15,5 +15,5 @@
 <!--    <Button text="Hello!" onAction="#onHelloButtonClick"/>-->
 <!--    <Button text="Goodbye!" onAction="#onGoodbyeButtonClick"/>-->
 
-    <Button fx:id="closeWindow" cancelButton="true" layoutX="350.0" layoutY="767.0" mnemonicParsing="true" onAction="#handleCloseButtonAction" prefWidth="100.0" text="Close" />
+    <Button fx:id="closeWindow" cancelButton="true" layoutX="350.0" layoutY="767.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefWidth="100.0" text="Close" />
 </VBox>
