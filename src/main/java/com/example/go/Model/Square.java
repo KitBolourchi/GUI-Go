@@ -7,7 +7,7 @@ public class Square extends StackPane {
     private int x, y;
     private Boolean occupied;
     private String name;
-    private Color color = Color.web("#b1e4b9");
+    private Color color = Color.web("#e4c16f");
 
     public Square(int x, int y) {
         this.x = x;

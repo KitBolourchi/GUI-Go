@@ -9,7 +9,7 @@ public class Controller {
     @FXML
     GridPane goBoard;
 
-    public void initialise() {
+    public void initialize() {
         Game game = new Game(goBoard);
 
     }

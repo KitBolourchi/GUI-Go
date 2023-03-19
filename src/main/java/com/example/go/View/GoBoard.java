@@ -33,7 +33,6 @@ public class GoBoard {
 
                 goBoard.add(square, i, j, 1, 1);
                 squares.add(square);
-
             }
         }
     }
