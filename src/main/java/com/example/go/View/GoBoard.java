@@ -21,6 +21,13 @@ public class GoBoard {
     }
 
     private void makeBoard(GridPane goBoard) {
+        for(int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                Square square = new Square(i, j);
+                sqaure.
+
+            }
+        }
         // nested loop to create the rows / columns of squares and then add to the gridpane
 
     }
