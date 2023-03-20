@@ -10,4 +10,8 @@ public class Game {
     public Game(GridPane goBoard) {
         gb = new GoBoard(goBoard);
     }
+
+    public void setEventHandlers(GridPane goBoard) {
+
+    }
 }
