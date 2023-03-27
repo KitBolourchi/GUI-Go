@@ -37,6 +37,7 @@ public class GoBoard {
         }
     }
 
-    private void setTheme(Square square, int i, int j) {
+    public GridPane getGoBoard() {
+        return goBoard;
     }
 }

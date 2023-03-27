@@ -20,11 +20,12 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
+        root.getOnMouseMoved();
         root.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void handle(MouseEvent event) {
-                System.out.println(event.getSceneX());
-                System.out.println(event.getSceneY());
+            public void handle(MouseEvent mouseEvent) {
+                mouseEvent.consume();
+                System.out.println("Image! " + mouseEvent.getTarget());
             }
         });
         // maybe have a mouse event based on if it is within a squares corner radii?
