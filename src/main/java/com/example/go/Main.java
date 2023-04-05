@@ -19,7 +19,6 @@ public class Main extends Application {
         Scene scene = new Scene(root, 600, 600);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-
         primaryStage.show();
         root.getOnMouseMoved();
         root.setOnMouseClicked(new EventHandler<MouseEvent>() {
