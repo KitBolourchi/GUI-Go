@@ -40,4 +40,6 @@ public class GoBoard {
     public GridPane getGoBoard() {
         return goBoard;
     }
+//
+//    public Square getSquare
 }

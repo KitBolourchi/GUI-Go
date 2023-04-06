@@ -15,5 +15,6 @@ public class Controller {
     public void initialize() {
         Game game = new Game(goBoard);
 
+
     }
 }

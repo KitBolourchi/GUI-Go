@@ -13,17 +13,20 @@ public class Game {
 
     public Game(GridPane goBoard) {
         gb = new GoBoard(goBoard);
-        gb.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
+        setEventHandlers(gb);
+    }
+
+    public void setEventHandlers(GoBoard goBoard) {
+        //utilise the nodes (sqaures .mouse entered functions)
+        goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 mouseEvent.consume();
-                System.out.println("Image! " + mouseEvent.getTarget());
+                System.out.println("Square! " + mouseEvent.getTarget());
+                System.out.println(mouseEvent.getSource());
+                // something to use is gridpanes children, seems squares are stored there?
             }
         });
-    }
-
-    public void setEventHandlers(GridPane goBoard) {
-        //utilise the nodes (sqaures .mouse entered functions)
 
     }
 }

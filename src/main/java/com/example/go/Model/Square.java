@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 
 public class Square extends StackPane {
     private int x, y;
-    private Boolean occupied;
+    private Boolean occupied = false;
     private String name;
     private Color color = Color.web("#e4c16f");
 
@@ -20,5 +20,9 @@ public class Square extends StackPane {
 
     public Color getColor() {
         return this.color;
+    }
+
+    public boolean getOccupied() {
+        return this.occupied;
     }
 }
