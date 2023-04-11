@@ -14,6 +14,11 @@ public class Square extends StackPane {
         this.y = y;
     }
 
+    @Override
+    public String toString() {
+        return "Square";
+    }
+
     public void setName(String name) {
         this.name = name;
     }

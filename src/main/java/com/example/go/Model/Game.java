@@ -2,6 +2,7 @@ package com.example.go.Model;
 
 import com.example.go.View.GoBoard;
 import javafx.event.EventHandler;
+import javafx.event.EventTarget;
 import javafx.event.EventType;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
@@ -17,10 +18,16 @@ public class Game {
     }
 
     public void setEventHandlers(GoBoard goBoard) {
-        //utilise the nodes (sqaures .mouse entered functions)
         goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                EventTarget target = mouseEvent.getTarget();
+
+                if(target.toString().equals("Square")) {
+                    Square square = (Square) target;
+                    System.out.println(square.getChildren());
+
+                }
                 mouseEvent.consume();
                 System.out.println("Square! " + mouseEvent.getTarget());
                 System.out.println(mouseEvent.getSource());
