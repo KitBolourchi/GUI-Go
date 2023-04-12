@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.event.EventType;
 import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
@@ -18,20 +19,21 @@ public class Game {
     }
 
     public void setEventHandlers(GoBoard goBoard) {
-        goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
+//        Image image = new Image("View/Stones/blackStone.png");
+        goBoard.getGoBoard().setOnMouseMoved(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 EventTarget target = mouseEvent.getTarget();
 
                 if(target.toString().equals("Square")) {
                     Square square = (Square) target;
-                    System.out.println(square.getChildren());
+                    if(!square.getOccupied()) {
+
+                    }
 
                 }
                 mouseEvent.consume();
-                System.out.println("Square! " + mouseEvent.getTarget());
-                System.out.println(mouseEvent.getSource());
-                // something to use is gridpanes children, seems squares are stored there?
+                // TODO add way to have image hover with cursor if square is not occupied
             }
         });
 

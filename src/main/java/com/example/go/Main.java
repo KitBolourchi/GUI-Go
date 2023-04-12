@@ -20,6 +20,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
+//        scene.addEventFilter(MouseEvent.ANY, e -> System.out.println( e));
 
         // maybe have a mouse event based on if it is within a squares corner radii?
     }
