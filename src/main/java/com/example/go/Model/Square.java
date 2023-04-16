@@ -30,4 +30,16 @@ public class Square extends StackPane {
     public boolean getOccupied() {
         return this.occupied;
     }
+
+    public void setOccupied(boolean bool) {
+        this.occupied = bool;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getX() {
+        return x;
+    }
 }

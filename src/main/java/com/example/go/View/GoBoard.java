@@ -1,5 +1,6 @@
 package com.example.go.View;
 
+import com.example.go.Model.Stone;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 
@@ -39,6 +40,11 @@ public class GoBoard {
 
     public GridPane getGoBoard() {
         return goBoard;
+    }
+
+    public void addPiece(Square square, Stone stone){
+        square.getChildren().add(stone);
+        square.setOccupied(true);
     }
 //
 //    public Square getSquare

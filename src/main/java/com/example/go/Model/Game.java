@@ -27,7 +27,11 @@ public class Game {
 
                 if(target.toString().equals("Square")) {
                     Square square = (Square) target;
+                    System.out.println(square.getOccupied());
                     if(!square.getOccupied()) {
+                        Stone stone = new Stone("black", square.getX(), square.getY());
+                        stone.setImage();
+                        goBoard.addPiece(square, stone);
 
                     }
 
