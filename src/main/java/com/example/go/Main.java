@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +18,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         primaryStage.setTitle("Go");
         Scene scene = new Scene(root, 600, 600);
+        scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
