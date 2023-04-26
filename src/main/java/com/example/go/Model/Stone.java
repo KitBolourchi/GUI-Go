@@ -21,9 +21,10 @@ public class Stone extends ImageView {
     }
 
     public void setPiece(Image image) {
-        ImageView imageView = new ImageView(image);
-        imageView.setFitHeight(60);
-        imageView.setFitWidth(60);
+        ImageView imageView = new ImageView();
+        imageView.setImage(image);
+        imageView.setFitHeight(50);
+        imageView.setFitWidth(50);
 
         this.setImage(imageView.snapshot(null, null));
     }
