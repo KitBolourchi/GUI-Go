@@ -21,15 +21,10 @@ public class Stone extends ImageView {
     }
 
     public void setPiece(Image image) {
-        ImageView imageView = new ImageView();
-        imageView.setImage(image);
-        imageView.setFitHeight(50);
-        imageView.setFitWidth(50);
-
-        this.setImage(imageView.snapshot(null, null));
+        this.setImage(image);
     }
 
     public void setImage() {
-        this.setPiece(new Image(new File("src/main/resources/com/example/go/Stones/" + this.colour + "Stone.png").toURI().toString()));
+        this.setPiece(new Image(new File("src/main/resources/com/example/go/Stones/" + this.colour + "Stone.png").toURI().toString(), 50, 50, false, false));
     }
 }
