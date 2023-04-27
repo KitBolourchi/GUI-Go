@@ -20,7 +20,7 @@ public class Game {
 
     public void setEventHandlers(GoBoard goBoard) {
 //        Image image = new Image("View/Stones/blackStone.png");
-        goBoard.getGoBoard().setOnMouseMoved(new EventHandler<MouseEvent>() {
+        goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 EventTarget target = mouseEvent.getTarget();
