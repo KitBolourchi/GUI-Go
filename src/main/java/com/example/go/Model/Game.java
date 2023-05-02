@@ -19,25 +19,24 @@ public class Game {
     }
 
     public void setEventHandlers(GoBoard goBoard) {
-//        Image image = new Image("View/Stones/blackStone.png");
         goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                int playerTurn = 1;
+                currentPlayer = playerTurn % 2 == 0 ? "white" : "black";
                 EventTarget target = mouseEvent.getTarget();
 
                 if(target.toString().equals("Square")) {
                     Square square = (Square) target;
                     System.out.println(square.getOccupied());
                     if(!square.getOccupied()) {
-                        Stone stone = new Stone("black", square.getX(), square.getY());
+                        Stone stone = new Stone(currentPlayer, square.getX(), square.getY());
                         stone.setImage();
                         goBoard.addPiece(square, stone);
 
                     }
-
                 }
                 mouseEvent.consume();
-                // TODO add way to have image hover with cursor if square is not occupied
             }
         });
 
