@@ -15,6 +15,7 @@ public class Game {
 
     public Game(GridPane goBoard) {
         gb = new GoBoard(goBoard);
+        currentPlayer = "black";
         setEventHandlers(gb);
     }
 
@@ -22,8 +23,6 @@ public class Game {
         goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                int playerTurn = 1;
-                currentPlayer = playerTurn % 2 == 0 ? "white" : "black";
                 EventTarget target = mouseEvent.getTarget();
 
                 if(target.toString().equals("Square")) {
@@ -33,6 +32,7 @@ public class Game {
                         Stone stone = new Stone(currentPlayer, square.getX(), square.getY());
                         stone.setImage();
                         goBoard.addPiece(square, stone);
+                        currentPlayer = currentPlayer.equals("white") ? "black" : "white";
 
                     }
                 }
