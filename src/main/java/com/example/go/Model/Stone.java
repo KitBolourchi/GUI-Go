@@ -6,9 +6,10 @@ import javafx.scene.image.ImageView;
 import java.io.File;
 
 public class Stone extends ImageView {
-    String colour;
-    int posX;
-    int posY;
+    private String colour;
+    private int posX;
+    private int posY;
+    private int liberties;
 
     public Stone(String colour, int posX, int posY) {
         this.colour = colour;

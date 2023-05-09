@@ -3,9 +3,6 @@ package com.example.go.Model;
 import com.example.go.View.GoBoard;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
-import javafx.event.EventType;
-import javafx.scene.Node;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
@@ -27,18 +24,20 @@ public class Game {
 
                 if(target.toString().equals("Square")) {
                     Square square = (Square) target;
-                    System.out.println(square.getOccupied());
                     if(!square.getOccupied()) {
                         Stone stone = new Stone(currentPlayer, square.getX(), square.getY());
                         stone.setImage();
                         goBoard.addPiece(square, stone);
                         currentPlayer = currentPlayer.equals("white") ? "black" : "white";
-
                     }
                 }
                 mouseEvent.consume();
             }
         });
 
+    }
+
+    public void checkLiberties() {
+        // Check the x and y +- 1 for the liberties
     }
 }

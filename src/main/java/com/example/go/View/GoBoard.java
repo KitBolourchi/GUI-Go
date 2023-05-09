@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class GoBoard {
 
-    GridPane goBoard;
-    String theme;
-    ArrayList<Square> squares = new ArrayList<Square>();
+    private GridPane goBoard;
+    private String theme;
+    private ArrayList<Square> squares = new ArrayList<Square>();
 
 
     public GoBoard(GridPane goBoard) {
