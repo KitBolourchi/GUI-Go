@@ -27,7 +27,12 @@ public class Game {
                     if(!square.getOccupied()) {
                         Stone stone = new Stone(currentPlayer, square.getX(), square.getY());
                         stone.setImage();
-                        goBoard.addPiece(square, stone);
+                        stone.checkLiberties();
+                        if (stone.getLiberties().size() > 3) {
+                            System.out.println("Cannot place stone");
+                        } else {
+                            goBoard.addPiece(square, stone);
+                        }
                         currentPlayer = currentPlayer.equals("white") ? "black" : "white";
                     }
                 }

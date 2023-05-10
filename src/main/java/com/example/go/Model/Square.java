@@ -23,6 +23,10 @@ public class Square extends StackPane {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Color getColor() {
         return this.color;
     }

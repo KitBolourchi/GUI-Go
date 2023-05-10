@@ -26,7 +26,7 @@ public class GoBoard {
         for(int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 Square square = new Square(i, j);
-                square.setName("Square");
+                square.setName("Square" + i + j);
                 square.setPrefHeight(100);
                 square.setPrefWidth(100);
                 square.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
@@ -46,6 +46,8 @@ public class GoBoard {
         square.getChildren().add(stone);
         square.setOccupied(true);
     }
-//
-//    public Square getSquare
+
+    public ArrayList<Square> getSquares() {
+        return squares;
+    }
 }
