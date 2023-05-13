@@ -6,6 +6,7 @@ import javafx.scene.paint.Color;
 public class Square extends StackPane {
     private int x, y;
     private Boolean occupied = false;
+    private Stone stone;
     private String name;
     private Color color = Color.web("#e4c16f");
 
@@ -45,5 +46,13 @@ public class Square extends StackPane {
 
     public int getX() {
         return x;
+    }
+
+    public Stone getStone() {
+        return stone;
+    }
+
+    public void setStone(Stone stone) {
+        this.stone = stone;
     }
 }

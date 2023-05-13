@@ -32,6 +32,7 @@ public class Game {
                             System.out.println("Cannot place stone");
                         } else {
                             goBoard.addPiece(square, stone);
+                            square.setStone(stone);
                         }
                         currentPlayer = currentPlayer.equals("white") ? "black" : "white";
                     }
