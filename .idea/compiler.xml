@@ -9,8 +9,5 @@
         <module name="Go" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Go" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>

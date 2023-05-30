@@ -42,8 +42,4 @@ public class Game {
         });
 
     }
-
-    public void checkLiberties() {
-        // Check the x and y +- 1 for the liberties
-    }
 }
