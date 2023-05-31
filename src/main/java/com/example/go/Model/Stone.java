@@ -47,7 +47,8 @@ public class Stone extends ImageView {
         for (String check : libChecks) {
             if(getSquareByName(check).getOccupied()) {
                 System.out.println(getSquareByName(check).getStone().getColour());
-                liberties.add(check);
+                // TODO: add new method to check the colors of nearby squares and allow or dis allow placement of stone
+                this.liberties.add(check);
             }
         }
 

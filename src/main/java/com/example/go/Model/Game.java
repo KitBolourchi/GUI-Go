@@ -17,6 +17,13 @@ public class Game {
     }
 
     public void setEventHandlers(GoBoard goBoard) {
+        goBoard.getGoBoard().setOnMouseMoved(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println("This is moving");
+                event.
+            }
+        });
         goBoard.getGoBoard().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
